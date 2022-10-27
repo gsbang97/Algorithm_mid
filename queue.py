@@ -10,14 +10,14 @@ class queue:
         if self.front is None:
             return True
         return False
-    def insert(self, data):
+    def enqueue(self, data):
         new = Node(data)
         if self.isEmpty():
             self.rear = self.front = new
         else:
             self.rear.link = new
             self.rear = new
-    def pop(self):
+    def dequeue(self):
         if(self.isEmpty()): 
             print("오류 발생")
             return False
