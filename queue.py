@@ -7,9 +7,7 @@ class queue:
         self.front = None
         self.rear = None
     def isEmpty(self):
-        if self.front is None:
-            return True
-        return False
+        return self.front is None
     def enqueue(self, data):
         new = Node(data)
         if self.isEmpty():

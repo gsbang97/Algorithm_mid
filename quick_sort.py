@@ -16,10 +16,8 @@ def quick_sort(list):
   quick_sort_sub(list, 0, len(list) - 1)
 
 
-l = []
 import random
-for _ in range(100):
-  l.append(random.randint(1, 1000))
+l = [random.randint(1, 1000) for _ in range(100)]
 print(l)
 quick_sort(l)
 print(l)

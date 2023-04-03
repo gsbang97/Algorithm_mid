@@ -7,6 +7,6 @@ def binary_search(list, cmp,size):
         return binary_search(list[length+1:],cmp,size+length)
     else:
         return binary_search(list[:length],cmp,size)
-l = [x for x in range(1000)]
+l = list(range(1000))
 print(binary_search(l,33,0))
     
