@@ -3,17 +3,13 @@ class Node:
         self.rlink = None
         self.llink = None
         self.data = data
-        pass
     
 class Deque:        
     def __init__(self) -> None:
         self.front = None
         self.rear = None
-        pass
     def isEmpty(self):
-        if self.front is None or self.rear is None:
-            return True
-        return False
+        return self.front is None or self.rear is None
     def insertFront(self,data):
         new = Node(data)
         if self.isEmpty():
@@ -69,7 +65,6 @@ class Deque:
             s = s + n.data + " "
             n = n.rlink
         return s
-        pass
 dq = Deque()
 for i in range(10):
     dq.insertFront(str(i))

@@ -12,7 +12,7 @@ def sort(list):
       list[j] = item
 
 
-l = [x for x in range(1000)]
+l = list(range(1000))
 import random
 
 random.shuffle(l)

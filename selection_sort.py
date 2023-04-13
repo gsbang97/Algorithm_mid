@@ -10,9 +10,7 @@ def sort(list):
   return result
 
 
-q = []
 import random
-for x in range(10):
-  q.append(random.randint(1, 1000))
+q = [random.randint(1, 1000) for _ in range(10)]
 print(q)
 print(sort(q))

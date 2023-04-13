@@ -12,7 +12,7 @@ def sort(list):
     list[j + 1] = tmp
 
 
-l = [x for x in range(10)]
+l = list(range(10))
 import random
 
 random.shuffle(l)

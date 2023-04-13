@@ -1,13 +1,11 @@
 import string
 
 def isAlpha(a):
-    if a in string.ascii_letters:
-        return True
-    return False
+    return a in string.ascii_letters
     
 def palindrome(s):
-    queue = list()
-    stack = list()
+    queue = []
+    stack = []
     for x in s:
         if isAlpha(x):
             queue.append(x.lower())
@@ -15,9 +13,7 @@ def palindrome(s):
     while queue:
         if queue.pop(0) != stack.pop():
             return False
-    if stack:
-        return False
-    return True
+    return not stack
 print(palindrome("Wow"))
 print(palindrome("Madam, I'm Adam"))
 print(palindrome("Madam, I am Adam"))

@@ -8,15 +8,12 @@ def isAlright(str):
     if s in left_s:
       stack.append(s)
     elif s in right_s:
-      if stack:
-        tmp = stack.pop()
-        if left_s.index(tmp) != right_s.index(s):
-          return False
-      else:
+      if not stack:
         return False
-  if stack:
-    return False
-  return True
+      tmp = stack.pop()
+      if left_s.index(tmp) != right_s.index(s):
+        return False
+  return not stack
 
 
 print(isAlright("((())"))

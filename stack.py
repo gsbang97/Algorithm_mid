@@ -6,16 +6,12 @@ class stack:
     def __init__(self):
         self.top = None
     def isEmpty(self):
-        if self.top is None:
-            return True
-        return False
+        return self.top is None
     def insert(self, data):
         new = Node(data)
-        if self.isEmpty():
-            self.top = new
-        else:
+        if not self.isEmpty():
             new.link = self.top
-            self.top = new
+        self.top = new
     def pop(self):
         if(self.isEmpty()): 
             print("오류 발생")

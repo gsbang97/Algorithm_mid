@@ -4,7 +4,7 @@ def mergy_sort(slist):
         return slist
     left = mergy_sort(slist[:length//2])
     right = mergy_sort(slist[length//2:])
-    
+
     result = []
     while left and right:
         if left[0] < right[0]:
@@ -12,15 +12,13 @@ def mergy_sort(slist):
         else:
             result.append(right.pop(0))
     if left is not None:
-        result = result + left
+        result += left
     if right is not None:
         result = result + right
     return result
 
 import random
 
-l = list()
-for _ in range(10):
-    l.append(random.randint(1,100))
+l = [random.randint(1,100) for _ in range(10)]
 print(l)
 print(mergy_sort(l))
